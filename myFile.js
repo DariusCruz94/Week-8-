@@ -43,6 +43,10 @@ class Menu {
 
     //This method is going to return the the input the user has submitted. 
   start() {
+
+    let newSchools = ['Green School', 'Red School', 'Blue School', 'Yellow School'];
+        newSchools.forEach(name => this.schools.push(new School(name)));
+        // Added a new array that was required for our coding assignment.. Then, in the start method, I use a forEach loop to iterate over the newSchools array and create instances of the School class with the provided names, adding them to the this.schools array.
     let selection = this.showMainMenuOptions();
 
       while (selection != 0) {
@@ -147,4 +151,8 @@ class Menu {
 
 let menu = new Menu();   
 menu.start();
+
+let newSchools = ['Green School', 'Red School', 'Blue School', 'Yellow School'];
+
+
 //  used the menu.start to display our menu and also created an instance to activate the rest of the classes above.  
